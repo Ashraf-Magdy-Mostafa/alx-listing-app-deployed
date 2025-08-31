@@ -1,22 +1,57 @@
-import BookingForm from "@/components/booking/BookingForm";
-import OrderSummary from "@/components/booking/OrderSummary";
+// pages/booking/index.tsx
+import axios from "axios";
+import { useState, ChangeEvent, FormEvent } from "react";
 
-export default function BookingPage() {
-    const bookingDetails = {
-        propertyName: "Villa Arrecife Beach House",
-        price: 7500,
-        bookingFee: 65,
-        totalNights: 3,
-        startDate: "24 August 2024",
+export default function BookingForm() {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        cardNumber: "",
+        expirationDate: "",
+        cvv: "",
+        billingAddress: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+        setMessage("");
+
+        try {
+            await axios.post("/api/bookings", formData);
+            setMessage("Booking confirmed!");
+        } catch (err) {
+            setMessage("Failed to submit booking.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
-        <div className="container mx-auto p-6">
-            <div className="grid grid-cols-2 gap-6">
-                <BookingForm />
-                <OrderSummary bookingDetails={bookingDetails} />
-            </div>
-        </div>
+        <form onSubmit={handleSubmit}>
+            {/* Example input */}
+            <input
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleChange}
+            />
+
+            {/* Add other fields the same way */}
+            <button type="submit" disabled={loading}>
+                {loading ? "Processing..." : "Confirm & Pay"}
+            </button>
+
+            {message && <p>{message}</p>}
+        </form>
     );
 }
-
