@@ -21,6 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             tags: ["Mountain View", "Pet Friendly"],
         },
         {
+            id: "3",
             name: "Villa Ocean Breeze",
             address: {
                 state: "Seminyak",
