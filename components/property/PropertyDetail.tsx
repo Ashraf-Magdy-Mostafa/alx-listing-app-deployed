@@ -10,7 +10,7 @@ const isSvg = (url?: string) => typeof url === "string" && url.endsWith(".svg");
 export default function PropertyDetail({ property }: Props) {
     const {
         name,
-        image,           // string
+        // string
         images,          // optional: string[] gallery
         rating,
         address,         // { city?: string; country?: string; line1?: string; ... }
@@ -20,16 +20,16 @@ export default function PropertyDetail({ property }: Props) {
         bedrooms,        // number
         bathrooms,       // number
         size,            // number or string
-    } = property as any;
+    } = property as PropertyProps;
 
-    const gallery: string[] = Array.isArray(images) && images.length ? images : (image ? [image] : []);
+    const gallery: string[] = (Array.isArray(images) && images.length) ? images : [];
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-6">
             <h1 className="text-2xl md:text-3xl font-bold mb-2">{name}</h1>
 
             <div className="text-gray-600 mb-4">
-                {address?.line1 ? `${address.line1}, ` : ""}
+                {address?.state ? `${address.state}, ` : ""}
                 {address?.city}{address?.city && address?.country ? ", " : ""}{address?.country}
             </div>
 
@@ -39,7 +39,7 @@ export default function PropertyDetail({ property }: Props) {
                     {gallery.map((src, i) => (
                         <div key={i} className="relative w-full h-64 md:h-72 rounded overflow-hidden">
                             {isSvg(src) ? (
-                                <img src={src} alt={`${name} ${i + 1}`} className="w-full h-full object-cover" />
+                                <Image src={src} alt={`${name} ${i + 1}`} className="w-full h-full object-cover" />
                             ) : (
                                 <Image
                                     src={src}

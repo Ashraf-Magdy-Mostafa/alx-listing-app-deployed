@@ -6,14 +6,14 @@ type Props = {
 };
 
 const PropertyCard = ({ property }: Props) => {
-  const { name, image, rating, address, price } = property;
+  const { name, images, rating, address, price } = property;
 
   return (
     <div className="border rounded overflow-hidden shadow-md hover:shadow-lg transition">
       {/* Use next/image if image is a remote URL and configured in next.config.js */}
       <div className="relative h-48 w-full">
         <Image
-          src={image}
+          src={images && images.length > 0 ? images[0] : "https://placehold.co/600x400"}
           alt={name}
           fill
           className="object-cover"

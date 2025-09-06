@@ -30,7 +30,7 @@ export default function BookingForm() {
             await axios.post("/api/bookings", formData);
             setMessage("Booking confirmed!");
         } catch (err) {
-            setMessage("Failed to submit booking.");
+            setMessage(err + " " + "Failed to submit booking.");
         } finally {
             setLoading(false);
         }

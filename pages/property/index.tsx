@@ -3,5 +3,5 @@ import { PROPERTYLISTINGSAMPLE } from "@/constants"; // adjust the path if neede
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // Simulate list endpoint
-    res.status(200).json(PROPERTYLISTINGSAMPLE);
+    res.json(PROPERTYLISTINGSAMPLE);
 }

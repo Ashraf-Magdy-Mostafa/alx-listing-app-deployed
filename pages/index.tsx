@@ -1,5 +1,4 @@
 import axios from "axios";
-import Image from "next/image";
 import Pill from "@/components/Pill";
 import { useEffect, useState, useMemo } from "react";
 import PropertyCard from "@/components/property/PropertyCard";
@@ -21,10 +20,10 @@ export default function Home() {
       try {
         setLoading(true);
         setError(null);
-        const res = await axios.get<PropertyProps[]>("/api/properties");
+        const res = await axios.get<PropertyProps[]>(`${process.env.NEXT_PUBLIC_API_BASE_URL}/properties`);
         console.log("Fetched properties:", res);
         if (isMounted) setProperties(res.data ?? []);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error("Error fetching properties:", err);
         if (isMounted) setError("Failed to load properties. Please try again.");
       } finally {
@@ -47,7 +46,7 @@ export default function Home() {
     if (!selectedFilter) return properties;
     return properties.filter((p) => {
       // Adjust this logic to match your API shape (e.g., p.tags or p.amenities)
-      const tags = (p as any).tags || (p as any).amenities || [];
+      const tags = (p as PropertyProps).tags || (p as PropertyProps).amenities || [];
       return Array.isArray(tags) && tags.some((t: string) => t?.toLowerCase() === selectedFilter.toLowerCase());
     });
   }, [properties, selectedFilter]);

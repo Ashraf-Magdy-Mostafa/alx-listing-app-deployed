@@ -28,7 +28,7 @@ const ReviewSection = ({ propertyId }: ReviewSectionProps) => {
                     `/api/properties/${propertyId}/reviews`
                 );
                 setReviews(response.data);
-            } catch (err: any) {
+            } catch (err: unknown) {
                 setError("Failed to load reviews.");
                 console.error("Error fetching reviews:", err);
             } finally {

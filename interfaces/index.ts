@@ -27,6 +27,12 @@ export interface PropertyProps {
     shower: string,
     occupants: string
   },
-  image: string,
-  discount: string
+  discount: string,
+  tags?: string[],
+  description?: string,
+  images?: string[],
+  amenities?: string[],
+  bedrooms?: number,
+  bathrooms?: number,
+  size?: number | string,
 }
