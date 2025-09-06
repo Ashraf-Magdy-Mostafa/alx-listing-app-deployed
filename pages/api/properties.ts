@@ -29,7 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Indonesia",
             },
             rating: 4.89,
-            category: ["Luxury Villa", "Pool", "Free Parking"],
+            tags: ["Luxury Villa", "Pool", "Free Parking"],
             price: 3200,
             offers: {
                 bed: "3",
@@ -47,7 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "USA",
             },
             rating: 4.7,
-            category: ["Mountain View", "Fireplace", "Self Checkin"],
+            tags: ["Mountain View", "Fireplace", "Self Checkin"],
             price: 1800,
             offers: {
                 bed: "4",
@@ -65,7 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "USA",
             },
             rating: 4.92,
-            category: ["Desert View", "Pet Friendly", "Self Checkin"],
+            tags: ["Desert View", "Pet Friendly", "Self Checkin"],
             price: 1500,
             offers: {
                 bed: "2",
@@ -83,7 +83,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "USA",
             },
             rating: 4.85,
-            category: ["City View", "Free WiFi", "24h Checkin"],
+            tags: ["City View", "Free WiFi", "24h Checkin"],
             price: 4500,
             offers: {
                 bed: "2",
@@ -101,7 +101,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "New Zealand",
             },
             rating: 4.77,
-            category: ["Riverside", "Private Dock", "Free Kayaks"],
+            tags: ["Riverside", "Private Dock", "Free Kayaks"],
             price: 2800,
             offers: {
                 bed: "3",
@@ -119,7 +119,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Indonesia",
             },
             rating: 4.95,
-            category: ["Beachfront", "Private Pool", "Chef Service"],
+            tags: ["Beachfront", "Private Pool", "Chef Service"],
             price: 5000,
             offers: {
                 bed: "5",
@@ -137,7 +137,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Canada",
             },
             rating: 4.65,
-            category: ["Lakeside", "Mountain View", "Hiking Trails"],
+            tags: ["Lakeside", "Mountain View", "Hiking Trails"],
             price: 2300,
             offers: {
                 bed: "3",
@@ -155,7 +155,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Thailand",
             },
             rating: 4.8,
-            category: ["Garden", "Free Parking", "Self Checkin"],
+            tags: ["Garden", "Free Parking", "Self Checkin"],
             price: 2750,
             offers: {
                 bed: "3",
@@ -173,7 +173,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Germany",
             },
             rating: 4.6,
-            category: ["City Center", "Free WiFi", "24h Checkin"],
+            tags: ["City Center", "Free WiFi", "24h Checkin"],
             price: 2000,
             offers: {
                 bed: "2",
@@ -191,7 +191,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Canada",
             },
             rating: 4.72,
-            category: ["Secluded", "Hot Tub", "Self Checkin"],
+            tags: ["Secluded", "Hot Tub", "Self Checkin"],
             price: 2600,
             offers: {
                 bed: "4",
@@ -209,7 +209,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Italy",
             },
             rating: 4.93,
-            category: ["Cliffside", "Infinity Pool", "Sea View"],
+            tags: ["Cliffside", "Infinity Pool", "Sea View"],
             price: 6000,
             offers: {
                 bed: "4",
@@ -227,7 +227,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Australia",
             },
             rating: 4.83,
-            category: ["Beachfront", "Pet Friendly", "Free Parking"],
+            tags: ["Beachfront", "Pet Friendly", "Free Parking"],
             price: 3400,
             offers: {
                 bed: "3",
@@ -245,7 +245,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Italy",
             },
             rating: 4.67,
-            category: ["Historical", "Free Breakfast", "Self Checkin"],
+            tags: ["Historical", "Free Breakfast", "Self Checkin"],
             price: 2700,
             offers: {
                 bed: "2",
@@ -263,7 +263,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Japan",
             },
             rating: 4.81,
-            category: ["City Center", "Free WiFi", "Public Transport"],
+            tags: ["City Center", "Free WiFi", "Public Transport"],
             price: 2200,
             offers: {
                 bed: "1",
@@ -281,7 +281,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Tanzania",
             },
             rating: 4.97,
-            category: ["Safari", "Guided Tours", "Free Breakfast"],
+            tags: ["Safari", "Guided Tours", "Free Breakfast"],
             price: 4500,
             offers: {
                 bed: "4",
@@ -299,7 +299,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "UK",
             },
             rating: 4.58,
-            category: ["Countryside", "Fireplace", "Self Checkin"],
+            tags: ["Countryside", "Fireplace", "Self Checkin"],
             price: 1800,
             offers: {
                 bed: "2",
@@ -317,7 +317,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "France",
             },
             rating: 4.86,
-            category: ["Riverfront", "Private Garden", "Self Checkin"],
+            tags: ["Riverfront", "Private Garden", "Self Checkin"],
             price: 5000,
             offers: {
                 bed: "4",
@@ -335,7 +335,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Switzerland",
             },
             rating: 4.75,
-            category: ["Mountain View", "Ski Access", "Fireplace"],
+            tags: ["Mountain View", "Ski Access", "Fireplace"],
             price: 3900,
             offers: {
                 bed: "3",
@@ -353,7 +353,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "Seychelles",
             },
             rating: 4.98,
-            category: ["Beachfront", "Private Pool", "Chef Service"],
+            tags: ["Beachfront", "Private Pool", "Chef Service"],
             price: 6500,
             offers: {
                 bed: "5",
@@ -371,7 +371,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 country: "South Africa",
             },
             rating: 4.78,
-            category: ["Ocean View", "Private Pool", "Self Checkin"],
+            tags: ["Ocean View", "Private Pool", "Self Checkin"],
             price: 4100,
             offers: {
                 bed: "3",
